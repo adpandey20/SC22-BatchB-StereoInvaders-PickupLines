@@ -1,0 +1,71 @@
+<!-- Home Page -->
+<!-- BEING USED AS A TEMPLATE TO GET EVERYTHING SET UP -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+    <title>Home - Pickup Line Generator</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./static/favicon.ico" />
+    <!-- CSS Stylesheet -->
+    <link href="{{ url_for('static', filename='css/our_style_final.css') }}" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="menu">
+        <div class="nav_logo_div">
+          <a href={{ url_for('home')}}><img src="./static/nav_logo.png" width="350px" height="auto" class="nav_logo"></a>
+        </div>
+        <div class="nav_buttons_div">
+          <a href={{ url_for('home')}} class="nav_button"><i class="fa fa-fw fa-home"></i> Home</a>
+          <a href={{ url_for('gen')}} class="nav_button"><i class="fa fa-comment-o" aria-hidden="true"></i> Generator</a>
+          <a href={{ url_for('our_team')}} class="nav_button" style="margin-right:12%;"><i class="fa fa-user"></i> Our Team</a>
+        </div>
+      </div>
+    </nav>
+    <div class="title">
+      <img src="./static/title_image.jpg">
+      <div class="title_text">Pickup Line<br>Generator</div>
+    </div>
+    <div class="un_img_grid">
+      <span class="un_img_grid_l">
+        <p>Are you tired of your dates calling you unoriginal?<br><br> Do you struggle to come up with creative pickup lines when it feels like everything’s been done before?<br><br> Well, try the Pickup Line Generator! It uses AI to create original pickup lines that are sure to woo (or humor).</p>
+      </span>
+      <span class="un_img_grid_r">
+        <img src="./static/logo.png" width="50%">
+      </span>
+    </div>
+    <div class="why">
+      <h2>Why We Made This</h2>
+      <p>We want to help and inspire those struggling on a date. Our generator aims to provide people with completely new and unique pickup lines that anyone can use. Along the way, we noticed that some of the lines generated were absolutely hilarious. We then realized that our generator could not only help people in the realm of dating, but provide a source of comedy and humor. People can control the craziness of the pickup lines our AI generates so the lines are tailored to whatever purpose the pickup lines will fulfill.</p>
+    </div>
+    <div class="process">
+      <h2>Process</h2>
+      <p>We began by creating our dataset. This was done by using a Kaggle dataset along with pick-up lines from other websites.<br><br> After creating the dataset, we choose our AI model, GPT-2, and began to train the model.<br><br> After experimenting on the number of steps the model should train on, we settled on 10,000.<br><br> Then we began to learn a bit of HTML and CSS to build our website from scratch. </p>
+    </div>
+    <div class="how_works">
+      <span class="how_works_header">
+        <h2>How<br>It<br>Works</h2>
+      </span>
+      <span class="how_works_text">
+        <ul class="fa-ul">
+          <li><span class="fa-li"><i class="fa fa-code"></i></span>We used GPT-2, version 124 m, because our model used unsupervised learning.</li>
+          <li><span class="fa-li"><i class="fa fa-code"></i></span>We used a variety of Python Modules to put our project together, including Pandas, Aitextgen, NLTK, and BeautifulSoup.</li>
+          <li><span class="fa-li"><i class="fa fa-code"></i></span>Our final data set had more than 1,500 pickup lines.</li>
+          <li><span class="fa-li"><i class="fa fa-code"></i></span>It took 3 hours to train the AI.</li>
+        </ul>
+      </span>
+    </div>
+    <div class="bottom">
+      <a href="https://www.ai-camp.org/">AI Camp</a>
+      <a href={{ url_for('home')}}>Home</a>
+      <a href={{ url_for('gen')}}>Generator</a>
+      <a href={{ url_for('our_team')}}>Our Team</a>
+    </div>
+    <footer>
+      <p>Copyright © AI Camp 2022</p>
+    </footer>
+  </body>
+</html>

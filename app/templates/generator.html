@@ -1,0 +1,74 @@
+<!-- Generator Page -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Generator - Pickup Line Generator</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./static/favicon.ico" />
+    <!-- CSS Stylesheet -->
+    <link href="{{ url_for('static', filename='css/our_style_final.css') }}" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="menu">
+        <div class="nav_logo_div">
+          <a href={{ url_for('home')}}><img src="./static/nav_logo.png" width="350px" height="auto" class="nav_logo"></a>
+        </div>
+        <div class="nav_buttons_div">
+          <a href={{ url_for('home')}} class="nav_button"><i class="fa fa-fw fa-home"></i> Home</a>
+          <a href={{ url_for('gen')}} class="nav_button"><i class="fa fa-comment-o" aria-hidden="true"></i> Generator</a>
+          <a href={{ url_for('our_team')}} class="nav_button" style="margin-right:12%;"><i class="fa fa-user"></i> Our Team</a>
+        </div>
+      </div>
+    </nav>
+    <div class="form_title">
+      <h2>Generator</h2>
+      <div class="form_header_line">
+        <span class="form_outer_line"></span>
+        <span class="fa fa-cog fa-2x" aria-hidden="true"></span>
+        <span class="form_outer_line"></span>
+        <p>Generate some amazing pickup lines!</p>
+      </div>
+    </div>
+    <div class="gen_form">
+      <form action="{{url_for('generate_text')}}" method="POST" source="custom" name="form-1">
+        <label for="promptbox">Prompt:</label><br>
+        <input type="text" id="promptbox" name="promptbox">
+        <br>
+        <div class="slidecontainer">
+          <label for="slidercontainer">Craziness</label>
+          <input type="range" min="10" max="100" value="10" class="slider" id="temperature" name="temperature">
+        </div>
+        <br>
+        <label for="list">Number of Pickup Lines:</label><br>
+        <select name="list" id="list">
+          <option value="Select Option">Select Option</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+        <br>
+        <input type="submit" id="form_submit_button">
+      </form>
+    </div>
+    <!--Pickup Lines Generate here-->
+    <div class="form_output">
+      <h2>Output</h2>
+      <div class="output_box" style="word-wrap:break-word; overflow-x:auto; width:100%;">
+        <p style = "letter-spacing:.12em;" action="{{url_for('results')}}"><pre>{{results|safe}}</pre><p>
+      </div>
+    </div>
+    <div class="bottom">
+      <a href="https://www.ai-camp.org/">AI Camp</a>
+      <a href={{ url_for('home')}}>Home</a>
+      <a href={{ url_for('gen')}}>Generator</a>
+      <a href={{ url_for('our_team')}}>Our Team</a>
+    </div>
+    <footer>
+      <p>Copyright © AI Camp 2022</p>
+    </footer>
+  </body>
+</html>

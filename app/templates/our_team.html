@@ -1,0 +1,108 @@
+<!-- Our Team Page -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Our Team - Pickup Line Generator</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./static/favicon.ico">
+    <!-- CSS Stylesheet -->
+    <link href="{{ url_for('static', filename='css/our_style_final.css') }}" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="menu">
+        <div class="nav_logo_div">
+          <a href={{ url_for('home')}}><img src="./static/nav_logo.png" width="350px" height="auto" class="nav_logo"></a>
+        </div>
+        <div class="nav_buttons_div">
+          <a href={{ url_for('home')}} class="nav_button"><i class="fa fa-fw fa-home"></i> Home</a>
+          <a href={{ url_for('gen')}} class="nav_button"><i class="fa fa-comment-o" aria-hidden="true"></i> Generator</a>
+          <a href={{ url_for('our_team')}} class="nav_button" style="margin-right:12%;"><i class="fa fa-user"></i> Our Team</a>
+        </div>
+      </div>
+    </nav>
+    <div class="our_team">
+      <h2>Our Team</h2>
+      <div class="our_team_line">
+        <span class="team_outer_line"></span>
+        <span class="fa fa-users fa-2x" aria-hidden="true"></span>
+        <span class="team_outer_line"></span>
+        <p>Meet the amazing minds behind the Pickup Line Generator.</p>
+      </div>
+    </div>
+
+    <div class="team_pictures">
+      <div class="team_row_1">
+        <div class="mem_1">
+          <img src="./static/kushagra.jpg" class="mem_image">
+          <div class="mem_overlay">
+            <h3>Kushagra Goel</h3>
+            <p>AI model trainer</p>
+          </div>
+        </div>
+        <div class="mem_2">
+          <img src="./static/ansh.jpg" class="mem_image">
+          <div class="mem_overlay">
+            <h3>Ansh Kanchadapu</h3>
+            <p>I worked as a data scientist, creating and preparing data sets to use in training the AI.</p>
+          </div>
+        </div>
+        <div class="mem_3">
+          <img src="./static/martin.png" class="mem_image">
+          <div class="mem_overlay">
+            <h3>Martin Teodoro</h3>
+            <p>AI Trainer. Helped developed and train the AI to create pickup lines.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="team_row_2">
+        <div class="mem_4">
+          <img src="./static/isabella.png" class="mem_image">
+          <div class="mem_overlay">
+            <h3>Isabella Austin</h3>
+            <p>i did the data cleaning with ansh :DD</p>
+          </div>
+        </div>
+        <div class="mem_5">
+          <img src="./static/atlas.jpg" class="mem_image">
+          <div class="mem_overlay">
+            <h3>Atlas Mallams</h3>
+            <p>Hi! Atlas here. I worked on developing the website with Elikem.</p>
+          </div>
+        </div>
+        <div class="mem_6">
+          <img src="./static/elikem.jpg" class="mem_image">
+          <div class="mem_overlay">
+            <h3>Elikem Amenuvor</h3>
+            <p>Helped the team <i>stick</i>  to our guns and helped Atlas with the website design</p>
+          </div>
+        </div>
+      </div>
+      <div class="team_row_3">
+        <div class="mem_7">
+          <img src="./static/aditya.png" class="mem_image">
+          <div class="mem_overlay">
+            <h3>Aditya Pandey</h3>
+            <p>Hey, this is Aditya! I am the instructor for this project. I enjoy teaching and have a zeal in the field of Natural Language Processing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      <a href="https://www.ai-camp.org/">AI Camp</a>
+      <a href={{ url_for('home')}}>Home</a>
+      <a href={{ url_for('gen')}}>Generator</a>
+      <a href={{ url_for('our_team')}}>Our Team</a>
+    </div>
+    <footer>
+      <p>Copyright © AI Camp 2022</p>
+      <img src="./static/easter egg.gif" width="65px" height="auto">
+    </footer>
+  </body>
+</html>
+
